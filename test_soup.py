@@ -7,7 +7,7 @@ demo = r.text
 from bs4 import BeautifulSoup
 
 soup = BeautifulSoup(demo, 'html.parser')
-print(soup.prettify())
+print(soup.prettify()) # 美化标签树
 
 #
 from bs4 import BeautifulSoup
@@ -19,7 +19,8 @@ tag
 
 #
 from bs4 import BeautifulSoup
-soup= BeautifulSoup(demo, 'html.parser')
+
+soup = BeautifulSoup(demo, 'html.parser')
 soup.a.name
 soup.a.parent.name
 soup.a.parent.parent.name
@@ -39,7 +40,7 @@ soup.p.string
 type(soup.p.string)
 
 #
-newsoup = BeautifulSoup('<b><!--This is a comment--></b><p>This is not a comment</p>','html.parser')
+newsoup = BeautifulSoup('<b><!--This is a comment--></b><p>This is not a comment</p>', 'html.parser')
 newsoup.b.string
 type(newsoup.b.string)
 newsoup.p.string
